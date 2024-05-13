@@ -38,7 +38,7 @@ async def store_data(location: str, weather_data: dict):
     supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
     # ------------------------------------------ Reomve this line ------------------------------------------
     
-    response = supabase.table('countries').select("*").execute()
+    response = supabase.table('weather_data').select("*").execute()
     print(response)
 # ------------------------------------ Remove this line ------------------------------------------
     table_name = "weather_data"
